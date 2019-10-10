@@ -6,6 +6,8 @@ sudo: required
 branches:
   only:
    - master
+notifications:
+  slack: sandystoh:uErmkugqixVHBjTGPjLfAnSS
 before_script:
   - npm install -g @angular/cli
 script:
