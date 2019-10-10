@@ -1,0 +1,12 @@
+.form-area {
+    width: 100vw;
+    padding: 20px;
+}
+
+.full-width {
+    width: 90%;
+}
+
+.mat-hint {
+    color: red;
+}
