@@ -1,6 +1,18 @@
 <div class="fixed-bg">
-  <div class="header">Weather Service</div>
-  <div class="block">
+  <mat-toolbar>
+          <a class="home"  [routerLink]="['/']">
+            <div fxLayout="row" fxLayoutAlign="flex-start center" fxLayoutGap="2vw">
+              <img src="assets/images/bitcoin-icon.gif" height="30px"> 
+              <div>Weather App</div>
+          </div></a>
+  </mat-toolbar>
+  <div class="header">Weather Service<br>
+    <button mat-raised-button color="accent" [routerLink]="['/list']" fragment="main">List Users</button> 
+    <button mat-raised-button color="accent" [routerLink]="['/add']" fragment="main">Sign Up</button>
+  </div>
+  <a id="main">
+   <div class="block">
   <router-outlet></router-outlet>
-</div>
+  </div>
+  </a>
 </div>

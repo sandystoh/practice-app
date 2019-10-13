@@ -1,18 +1,10 @@
-.list-area {
-    width: 100vw;
-    padding: 20px;
-    font-family: 'Muli', sans-serif;
-    font-size: 1.2rem;
-}
-
-
 .inventory-card {
     margin: 15px 0px;
-    width: 85vw;
+    width: 90vw;
 }
 
 .inventory-card:hover {
-    background-color: lightblue;
+    background-color: lightpink;
 }
 
 .inventory-image {

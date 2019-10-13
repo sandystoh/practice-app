@@ -1,1 +1,15 @@
-<p>list works!</p>
+<div class="list-area">
+<mat-card class="inventory-card" *ngFor="let u of users; let i = index;">
+                <div fxLayout="row" fxLayoutAlign="space-between center" >
+                    <div fxLayout="row" fxLayoutAlign="flex-start center">
+                    <div class="inventory-image"><img src="/assets/images/bitcoin-icon.gif" class="inventory-image"></div>
+                    <div class="item">
+                        <div>{{u.firstName}} {{u.lastName}}</div>
+                        <div class="subtitle">{{u.email}}</div>
+                        <div class="subtitle">{{u.country}}</div>
+                    </div>
+                    </div>
+                    <div><button mat-raised-button color="accent" (click)="delete(u.id)">Delete</button></div>
+                </div>
+        </mat-card>
+</div>

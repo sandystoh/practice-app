@@ -17,13 +17,15 @@ import { environment } from '../environments/environment';
 import { FormComponent } from './components/form.component';
 import { DexieService } from './services/dexie.service';
 import { ListComponent } from './components/list.component';
+import { ListItemComponent } from './components/list-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,

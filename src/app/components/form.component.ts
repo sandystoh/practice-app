@@ -7,7 +7,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 
 function ageRangeValidator(control: AbstractControl): { [key: string]: boolean } | null {
   if (control.value !== undefined && (isNaN(control.value) || control.value < 18 || control.value > 45)) {
-      return { 'ageRange': true };
+      return { ageRange: true };
   }
   return null;
 }
@@ -15,7 +15,7 @@ function ageRangeValidator(control: AbstractControl): { [key: string]: boolean }
 function ageRangeValidator2(min: number, max: number): ValidatorFn {
   return (control: AbstractControl): { [key: string]: boolean } | null => {  // control:FormControl
       if (control.value !== undefined && (isNaN(control.value) || control.value < min || control.value > max)) {
-          return { 'ageRange': true };
+          return { ageRange: true };
       }
       return null;
   };
@@ -43,21 +43,21 @@ export class FormComponent implements OnInit {
   get f() { return this.contactForm.controls; }
 
   createFormGroup() {
-    // tslint:disable-next-line:quotemark max-line-length
-    const emailPattern = "[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
     return new FormGroup({
       firstName: new FormControl('', [Validators.required]),
-      lastName: new FormControl('', [Validators.required, Validators.pattern('abc?')]),
+      lastName: new FormControl('', [Validators.required]), // , Validators.pattern('abc?')]),
       email: new FormControl('', [Validators.required,
-        Validators.pattern(emailPattern)]),
+        Validators.email]),
       country: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      custom: new FormControl('', [Validators.required, ageRangeValidator2(5,10)])
+      custom: new FormControl('', [Validators.required, ageRangeValidator2(5, 10)])
     });
   }
 
   cancel() {
     this.contactForm.reset();
+    this.router.navigate(['/list']);
   }
 
   onSubmit() {
@@ -68,7 +68,7 @@ export class FormComponent implements OnInit {
           this.snackBar.open('New User ' + this.contactForm.value.firstName + ' Added!', 'OK', { duration: 2000});
           this.dexieSvc.getAll().then(res => console.log('result', res));
           this.contactForm.reset();
-          this.router.navigate(['/']);
+          this.router.navigate(['/list']);
         });
 
       } else {
