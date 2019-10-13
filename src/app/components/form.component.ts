@@ -1,8 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import { DexieService } from '../services/dexie.service';
 import { Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+
+
+function ageRangeValidator(control: AbstractControl): { [key: string]: boolean } | null {
+  if (control.value !== undefined && (isNaN(control.value) || control.value < 18 || control.value > 45)) {
+      return { 'ageRange': true };
+  }
+  return null;
+}
+
+function ageRangeValidator2(min: number, max: number): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: boolean } | null => {  // control:FormControl
+      if (control.value !== undefined && (isNaN(control.value) || control.value < min || control.value > max)) {
+          return { 'ageRange': true };
+      }
+      return null;
+  };
+}
 
 @Component({
   selector: 'app-form',
@@ -30,11 +47,12 @@ export class FormComponent implements OnInit {
     const emailPattern = "[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     return new FormGroup({
       firstName: new FormControl('', [Validators.required]),
-      lastName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required, Validators.pattern('abc?')]),
       email: new FormControl('', [Validators.required,
         Validators.pattern(emailPattern)]),
       country: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      custom: new FormControl('', [Validators.required, ageRangeValidator2(5,10)])
     });
   }
 
@@ -61,4 +79,5 @@ export class FormComponent implements OnInit {
       console.log(error);
     });
   }
+
 }
