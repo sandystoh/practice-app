@@ -1,0 +1,100 @@
+{
+  "configVersion": 1,
+  "timestamp": 1570970907220,
+  "index": "/practice-app/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/practice-app/favicon.ico",
+        "/practice-app/index.html",
+        "/practice-app/main-es2015.078b020b115c96c0ae77.js",
+        "/practice-app/main-es5.078b020b115c96c0ae77.js",
+        "/practice-app/manifest.webmanifest",
+        "/practice-app/polyfills-es2015.d3e61f0dd2b58e518eca.js",
+        "/practice-app/polyfills-es5.517f1d5415025b3e9b1a.js",
+        "/practice-app/runtime-es2015.b948044840398824f16e.js",
+        "/practice-app/runtime-es5.b948044840398824f16e.js",
+        "/practice-app/styles.04e5afab6bcc2c175a85.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/practice-app/assets/data/citylist.json",
+        "/practice-app/assets/data/mastercitylist.json",
+        "/practice-app/assets/icons/icon-128x128.png",
+        "/practice-app/assets/icons/icon-144x144.png",
+        "/practice-app/assets/icons/icon-152x152.png",
+        "/practice-app/assets/icons/icon-192x192.png",
+        "/practice-app/assets/icons/icon-384x384.png",
+        "/practice-app/assets/icons/icon-512x512.png",
+        "/practice-app/assets/icons/icon-72x72.png",
+        "/practice-app/assets/icons/icon-96x96.png",
+        "/practice-app/assets/images/architecture-background.jpg",
+        "/practice-app/assets/images/bitcoin-icon.gif",
+        "/practice-app/assets/images/city.webp",
+        "/practice-app/assets/images/cloud-background.jpg",
+        "/practice-app/assets/images/lightning.jpg",
+        "/practice-app/assets/images/sunset-background.jpg",
+        "/practice-app/assets/images/weather-background.jpg",
+        "/practice-app/cloud-background.0f4740bfe7f730bc33ac.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/practice-app/assets/data/citylist.json": "796f17d6c27220fd83ce30e25294b590fd282fae",
+    "/practice-app/assets/data/mastercitylist.json": "1d9b2b2deaf07676e2160fb3ca3c9f4c3e2537a8",
+    "/practice-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/practice-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/practice-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/practice-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/practice-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/practice-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/practice-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/practice-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/practice-app/assets/images/architecture-background.jpg": "22f668e90c14f9a323b6223968bf389cb2abf2e4",
+    "/practice-app/assets/images/bitcoin-icon.gif": "49d3cf219c7f8a7f8f10475d6d08ec43a49af518",
+    "/practice-app/assets/images/city.webp": "aa706ad11b2ec759d0c36a47ce9c898130df20ad",
+    "/practice-app/assets/images/cloud-background.jpg": "c0693c08938141be2df80a4c99d32f869e705933",
+    "/practice-app/assets/images/lightning.jpg": "ace874b1ef03587f7a6fb2b260898296bd2da789",
+    "/practice-app/assets/images/sunset-background.jpg": "449253b946af4a8cfc43980c916c433ebcc056f6",
+    "/practice-app/assets/images/weather-background.jpg": "fbf6b249fb64d54fdaeab34586384a0a150d8b74",
+    "/practice-app/cloud-background.0f4740bfe7f730bc33ac.jpg": "c0693c08938141be2df80a4c99d32f869e705933",
+    "/practice-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/practice-app/index.html": "eb74baf33baca9f9be0f742691daaaf8bbf0326e",
+    "/practice-app/main-es2015.078b020b115c96c0ae77.js": "42054d6e4ac298e8aeef77b97d85aceacd4a7d37",
+    "/practice-app/main-es5.078b020b115c96c0ae77.js": "29a94146e77ffd8b38a5c99aab6ecc19206c0471",
+    "/practice-app/manifest.webmanifest": "733036ef2085aeac2e33c97552fd875a42bad4bd",
+    "/practice-app/polyfills-es2015.d3e61f0dd2b58e518eca.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
+    "/practice-app/polyfills-es5.517f1d5415025b3e9b1a.js": "bc55c457c97924a880c8c5bee5337b8d12a7d7d8",
+    "/practice-app/runtime-es2015.b948044840398824f16e.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/practice-app/runtime-es5.b948044840398824f16e.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/practice-app/styles.04e5afab6bcc2c175a85.css": "3cc403fd8a7f4415c4e628edb3725d33b18ff21e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
